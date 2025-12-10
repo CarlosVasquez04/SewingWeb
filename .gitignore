@@ -1,0 +1,47 @@
+########################
+# Visual Studio
+########################
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+########################
+# Build / publish
+########################
+[Bb]in/
+[Oo]bj/
+[Aa]pp_Data/
+[Ll]og/
+*.log
+
+# IIS Express
+.iisexpress/
+
+########################
+# Node / tooling (future-proofing)
+########################
+node_modules/
+dist/
+npm-debug.log*
+yarn-error.log*
+
+########################
+# OS cruft
+########################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+########################
+# Backup / temp
+########################
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swn
+*.swo
+*.orig
