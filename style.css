@@ -15,7 +15,7 @@ body {
     font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #fff7f2, #ffeef8);
     color: #333;
-    cursor: url('../Images/minecraft-axe-16.png'), auto;
+    cursor: url('./Images/minecraft-axe-16.png') 0 0, auto;
 }
 
 /* Layout */
