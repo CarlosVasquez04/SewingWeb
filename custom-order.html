@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Order Request | Nat the Brat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Pacifico&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <header>
+            <div class="nav-inner">
+                <a href="index.html" class="brand">
+                    <div class="brand-logo">S</div>
+                    <div class="brand-text">
+                        <span>Nat the Brat</span>
+                        <span>Custom sewing &amp; alterations</span>
+                    </div>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Previous Work</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="custom-order.html">Custom Order</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="section">
+                <div class="section-inner">
+                    <h1 class="section-title">Custom order request</h1>
+                    <p class="section-subtitle">
+                        Could add description here if you want one if not I can remove
+                    </p>
+
+                    <div class="card">
+                        <h2 style="font-size:1.1rem; margin-bottom:0.6rem;">What happens after you submit:</h2>
+                        <ol class="steps">
+                            <li class="step-item">
+                                <div class="step-number">1</div>
+                                <div>You'll get an automatic confirmation email with a copy of your request.</div>
+                            </li>
+                            <li class="step-item">
+                                <div class="step-number">2</div>
+                                <div>I'll review your request and email you within 2-3 business days with a clear quote or follow-up questions.</div>
+                            </li>
+                            <li class="step-item">
+                                <div class="step-number">3</div>
+                                <div>If we both agree, I send you a secure payment link Paypal. Once payment is completed, your order is officially booked.</div>
+                            </li>
+                        </ol>
+
+                        <!--
+                          BASIC FORM IMPLEMENTATION:
+                          For a static site, using a service like Formspree is the simplest.
+                          1. Go to https://formspree.io
+                          2. Create a form and copy your "form endpoint" URL.
+                          3. Replace YOUR_FORMSPREE_ENDPOINT below with your real endpoint.
+                        -->
+                        <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT"
+                              method="POST"
+                              style="margin-top:1.2rem;">
+                            <!-- Required field so Formspree knows where to reply -->
+                            <input type="hidden" name="_subject" value="New custom sewing request">
+                            <input type="hidden" name="_template" value="table">
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="name">Your name *</label>
+                                    <input type="text" id="name" name="Name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="Email" required>
+                                    <span class="helper"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone (optional)</label>
+                                    <input type="tel" id="phone" name="Phone" placeholder="">
+                                    <span class="helper"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="type">What type of project is this? *</label>
+                                    <select id="type" name="Project type" required>
+                                        <option value="">Select one</option>
+                                        <option value="Alteration/repair">Alteration / repair</option>
+                                        <option value="Custom garment">Custom garment</option>
+                                        <option value="Home decor">Home decor (pillows, curtains, etc.)</option>
+                                        <option value="Other">Other / not sure</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="budget">Approximate budget (USD)</label>
+                                    <input type="number" id="budget" name="Approx budget" min="0" step="1" placeholder="e.g. 80">
+                                    <span class="helper"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="deadline">Ideal date you'd like this finished</label>
+                                    <input type="date" id="deadline" name="Ideal completion date">
+                                    <span class="helper"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row-wide">
+                                <div class="form-group">
+                                    <label for="details">Tell me about your project *</label>
+                                    <textarea id="details" name="Project details" required
+                                              placeholder=""></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="photos">Links to inspiration photos (optional)</label>
+                                    <textarea id="photos" name="Inspiration links"
+                                              placeholder=""></textarea>
+                                    <span class="helper">
+                                        Static websites can't upload files directly without extra services,
+                                        so pasting links is the easiest way to share reference photos.
+                                    </span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="measurements">Measurements (if relevant)</label>
+                                    <textarea id="measurements" name="Measurements"
+                                              placeholder=""></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="shipping-city">Where are you located?</label>
+                                    <input type="text" id="shipping-city" name="City / country"
+                                           placeholder="City, state/province, country">
+                                    <span class="helper">
+                                        This helps me estimate shipping. I'll include shipping cost in your quote.
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div style="margin-top:1.4rem; display:flex; align-items:center; gap:0.8rem; flex-wrap:wrap;">
+                                <button type="submit" class="btn btn-primary">Submit request</button>
+                                <span style="font-size:0.8rem; color:#777;">
+                                    You'll receive an email confirmation shortly after submitting.
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-inner">
+                <span>&copy;<span id="year"></span> Nat the Brat. All rights reserved.</span>
+                <span>Have a question? Email <a href="mailto:safawefwaef@gmail.com">safawefwaef@gmail.com</a></span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
